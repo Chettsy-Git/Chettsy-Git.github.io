@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IAT355 A2 - Personal Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/13f332e762.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css" />
+
+
+    </head>
+    <body>
+    <!--------------------------------------HEADER SECTION-------------------------------------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="images/portfolio_logo-white.png" class="logo"></a>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="visualizations.html">Visualizations</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Game Designer & Visual Artist</h1>
+                <p>Pursuing creativity.</p>
+                <p>Encouraging ideas.</p>
+                <p>Inventing fun.</p>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------ABOUT SECTION-------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/simon_profile-picture.png" alt="Simon Chettle">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a young and passionate designer with a keenness for building games on the foundation of uniqueness, detail, and visual appeal. With 4 dedicated years of hands-on experience, I have honed my skills in crafting immersive gaming experiences that resonate with players on both an emotional and intellectual level.</p>
+                    <br>
+                    <p>My journey in game design began at a young age when my leisure time was spent playing a variety of computer games on my dad's work computer. I was fascinated by the idea that a game so fun and immersive came from nothing but an idea in someone's head. This led me to pursue the industry of game design to better understand how great games are made. Now, my goal is to recreate my childhood fascination with games for the next generation.</p>
+                    <br>
+                    <p>I thrive on the collaborative nature of game development, relishing the opportunity to work alongside talented artists, programmers, and writers to bring ideas to life. Whether it's brainstorming game mechanics, fine-tuning level design, or shaping narrative arcs, I approach each aspect of game development with enthusiasm and a commitment to excellence.</p>
+                    <br>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Visual Artist</span><br>Bringing art to life</li>
+                            <li><span>Game Programming</span><br>Turning ideas into reality</li>
+                            <li><span>Team Manager</span><br>Getting things on track</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Game Design Co-op</span><br>Playtesting and debugging</li>
+                            <li><span>University Student</span><br>It's harder than you think</li>
+                            <li><span>Group Projects</span><br>Don't even get me started</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2009-2015</span><br>Gifted Program - MACC</li>
+                            <li><span>2016-2020</span><br>High School Diploma</li>
+                            <li><span>2021-2026</span><br>Bachelors of Science Degree</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------SERVICES SECTION-------------------------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Skillset</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-gamepad"></i>
+                        <h2>Game Design</h2>
+                        <p>Create intreiguing and unique games with a fun twist on old classics</p>
+                        <a href="project-1.html">See Example</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-palette"></i>
+                        <h2>Visual Artist</h2>
+                        <p>Design a unique and appealing art style that enhances gameplay.</p>
+                        <a href="project-1.html">See Example</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Game Programmer</h2>
+                        <p>Develop interesting mechanics that help enrich gameplay.</p>
+                        <a href="project-2.html">See Example</a>
+                    </div>
+                </div>
+        </div>  
+    </div>
+    <!--------------------------------------CONTACT SECTION-------------------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>chettle1630@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>778-954-9244</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/artbychettsy/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCrJ_fL0P8RF4METUW4bjZ3g"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/simon-chettle-a6415a2a0/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+    <!--
+                    <a href="images/portfolio_logo-blk.png" download class="btn btn2">Download</a>
+    -->
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------FOOTER SECTION-------------------------------------->
+    <div id="footer">
+        <div class="container">
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/artbychettsy/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCrJ_fL0P8RF4METUW4bjZ3g"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/simon-chettle-a6415a2a0/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="visualizations.html">Visualizations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://github.com/ChettsySFU/IAT339_P03">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+        
+    <div class="footer-baseline">
+        <p>&copy; 2024 Simon Chettle. All rights reserved</p>
+    </div>
+
+
+
+
+
+
+
+
+    <!--------------------------------------JS SECTION-------------------------------------->
+    
+    <script>
+        
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname) 
+        {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+    </script>
+
+
+
+
+
+    </body>
+</html>
