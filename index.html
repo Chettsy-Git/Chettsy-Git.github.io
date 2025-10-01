@@ -17,7 +17,7 @@
     <!--------------------------------------HEADER SECTION-------------------------------------->
     <div id="header">
         <div class="container">
-            <nav>
+            <nav id="navbar">
                 <a href="index.html"><img src="images/portfolio_logo-white.png" class="logo"></a>
                 <ul id="sidemenu">
                     <li><a href="index.html">Home</a></li>
@@ -28,7 +28,7 @@
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <h1>Game Designer & Visual Artist</h1>
+                <h1>Game Designer & Artist</h1>
                 <p>Pursuing creativity.</p>
                 <p>Encouraging ideas.</p>
                 <p>Inventing fun.</p>
@@ -44,43 +44,35 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>I am a young and passionate designer with a keenness for building games on the foundation of uniqueness, detail, and visual appeal. With 4 dedicated years of hands-on experience, I have honed my skills in crafting immersive gaming experiences that resonate with players on both an emotional and intellectual level.</p>
+                    <p>I am a 4th year SIAT student with a concentration in Game Design who has a keenness for building games on the foundation of uniqueness, detail, and visual appeal. With 4 dedicated years of hands-on experience, I have honed my skills in crafting immersive gaming experiences that resonate with players on both an emotional and intellectual level.</p>
                     <br>
                     <p>My journey in game design began at a young age when my leisure time was spent playing a variety of computer games on my dad's work computer. I was fascinated by the idea that a game so fun and immersive came from nothing but an idea in someone's head. This led me to pursue the industry of game design to better understand how great games are made. Now, my goal is to recreate my childhood fascination with games for the next generation.</p>
                     <br>
                     <p>I thrive on the collaborative nature of game development, relishing the opportunity to work alongside talented artists, programmers, and writers to bring ideas to life. Whether it's brainstorming game mechanics, fine-tuning level design, or shaping narrative arcs, I approach each aspect of game development with enthusiasm and a commitment to excellence.</p>
                     <br>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab" id="skills">
+                    <div class="tab-contents active-tab" id="experience">
                         <ul>
-                            <li><span>Visual Artist</span><br>Bringing art to life</li>
-                            <li><span>Game Programming</span><br>Turning ideas into reality</li>
-                            <li><span>Team Manager</span><br>Getting things on track</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Game Design Co-op</span><br>Playtesting and debugging</li>
-                            <li><span>University Student</span><br>It's harder than you think</li>
-                            <li><span>Group Projects</span><br>Don't even get me started</li>
+                            <li><span>Forklift Operator</span><br>Organize warehouse and load trailers</li>
+                            <li><span>Game Design Co-op</span><br>In the process of getting a Co-op job</li>
+                            <li><span>Group Projects</span><br>Work with and manage large groups</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
                             <li><span>2009-2015</span><br>Gifted Program - MACC</li>
                             <li><span>2016-2020</span><br>High School Diploma</li>
-                            <li><span>2021-2026</span><br>Bachelors of Science Degree</li>
+                            <li><span>2021-Present</span><br>BSc - Game Design Concentration</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--------------------------------------SERVICES SECTION-------------------------------------->
+    <!--------------------------------------SKILLSET SECTION-------------------------------------->
     <div id="services">
         <div class="container">
             <h1 class="sub-title">Skillset</h1>
@@ -89,23 +81,87 @@
                         <i class="fa-solid fa-gamepad"></i>
                         <h2>Game Design</h2>
                         <p>Create intreiguing and unique games with a fun twist on old classics</p>
-                        <a href="project-1.html">See Example</a>
                     </div>
                     <div>
                         <i class="fa-solid fa-palette"></i>
                         <h2>Visual Artist</h2>
                         <p>Design a unique and appealing art style that enhances gameplay.</p>
-                        <a href="project-1.html">See Example</a>
                     </div>
                     <div>
                         <i class="fa-solid fa-code"></i>
                         <h2>Game Programmer</h2>
                         <p>Develop interesting mechanics that help enrich gameplay.</p>
-                        <a href="project-2.html">See Example</a>
                     </div>
                 </div>
         </div>  
     </div>
+
+    <!--------------------------------------PROJECTS SECTION-------------------------------------->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <p>A showcase of work from university projects and personal hobbies. 
+                My tool kit ranges from coding games in C# to painting on canvas with acrylic.</p>
+
+            <br>
+
+            <div class="row">
+                <div class="project-col-text">
+                    <h1>Slow & Steady</h1>
+                    <h3>Unity | C# | Aseprite</h3>
+                    <br>
+                    <p>An exhilarating, fast-paced top-down shooter where players take on the role of a CRT-TV to fight off rouge smart devices.</p>
+                    <br>
+                    <p>My role in this project was focused on the <span>visual design</span>. After agreeing on a pixel art style, I made the quick
+                        judegement to learn a new software called <span>Aesprite</span>. After building up a list of assets, 
+                        I spent the second phase of the project integrating the art as well as <span>programming the user interface</span>.
+                    </p>
+                </div>
+                <div class="project-col-img">
+                    <img src="images/s&s_main-menu.png" class="top" alt="Main Menu screen from the video game Slow & Steady"></img>
+                    <img src="images/s&s_gameplay-1.png" alt="Gameplay screenshot of Slow & Steady"></img>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="project-col-img">
+                    <img src="images/sotf_main-menu.png" class="top" alt="Main Menu screen from the video game Argon Chalice: Spirits of the Forest"></img>
+                    <img src="images/sotf_gameplay-2.png" alt="Main Menu screen from the video game Argon Chalice: Spirits of the Forest"></img>
+                </div>
+                <div class="project-col-text">
+                    <h1>Spirits of the Forest</h1>
+                    <h3>Unity | C#</h3>
+                    <br>
+                    <p>An immersive 2D side-scrolling platformer where a wise Wizard encounters fantastical puzzles, obstacles, and adventures.</p>
+                    <br>
+                    <p>Spirits of the Forest was my first project as the <span>lead game developer</span>. This meant I was in charge of designing and coding core game mechanics
+                        using <span>Unity and C#</span>. Another role as developer was being involved with and managing the group in aspects of the game such as
+                        <span>iterating on gameplay</span> flow/logic, <span>art direction</span>, and was involved in the <span>storyline</span>.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="project-col-text">
+                    <h1>My Name is CHETT$Y</h1>
+                    <h3>Painting | Acrylic on canvas</h3>
+                    <br>
+                    <p>55 x 40 in</p>
+                    <br>
+                    <p>Here is an example of my personal work; an <span>acrylic painting</span> that hangs above my bed. I discovered painting as a hobby during COVID, and since then
+                        I have loved to <span>experiment with different mediums</span> and styles. I believe it helps with my game design because it allows me to explore
+                        art outside of the digital work, and <span>possibly integrate it into a game</span>, like Cuphead.
+                    </p>
+                </div>
+                <div class="project-col-img">
+                    <a href="https://www.instagram.com/p/Cwa9a38Bdic/"><img src="images/personal-work-1.png" alt="abstract painting"></a>
+                </div>
+            </div>   
+
+            <a href="#header" class="btn">Back to Top</a>
+        </div>
+    </div>
+
+
     <!--------------------------------------CONTACT SECTION-------------------------------------->
     <div id="contact">
         <div class="container">
@@ -148,7 +204,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="visualizations.html">Visualizations</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://github.com/ChettsySFU/IAT339_P03">GitHub</a></li>
+                    <li><a href="https://github.com/Chettsy-Git">GitHub</a></li>
                 </ul>
             </nav>
         </div>
@@ -157,13 +213,6 @@
     <div class="footer-baseline">
         <p>&copy; 2024 Simon Chettle. All rights reserved</p>
     </div>
-
-
-
-
-
-
-
 
     <!--------------------------------------JS SECTION-------------------------------------->
     

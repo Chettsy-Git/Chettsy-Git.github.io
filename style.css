@@ -47,11 +47,23 @@ p {
     padding: 10px 10%;
 }
 
+#navbar {
+    padding: 10px 80px;
+    position: fixed;
+    background: #365486;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;   /* keep it above other content */
+
+}
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+
 }
 
 .logo {
@@ -250,6 +262,118 @@ nav ul li a:hover::after {
     color: #365486;
     transform: translateY(-10px);
 }
+
+/*--------------------------------------PROJECTS SECTION--------------------------------------*/
+
+#projects {
+    padding: 50px 0px;
+    background: #404040;
+}
+
+.project-col-text {
+    flex-basis: 30%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    align-content: center;
+}
+
+.project-col-text h1 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+.project-col-text p span {
+    color: #537fcc;
+    font-weight: 500;
+}
+
+.project-col-img {
+    flex-basis: 65%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0 50px 0;
+}
+
+.project-col-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    transition: opacity 0.5s ease, transform 0.5s;
+}
+
+/* top image is shown by default */
+.project-col-img img.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 2;
+}
+
+/* fade out top image on hover */
+.project-col-img:hover img.top {
+    opacity: 0;
+    transform: scale(1.05); /* keep your zoom effect */
+}
+
+/*--------------------------------------VISUALIZATION SECTION--------------------------------------*/
+
+#visualizations {
+    margin-top: 50px;
+    padding: 50px 0px;
+    background: #404040;
+}
+
+.visualization-col-text {
+    flex-basis: 30%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    align-content: center;
+}
+
+.visualization-col-text h1 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+.visualization-col-text p span {
+    color: #537fcc;
+    font-weight: 500;
+}
+
+.visualization-col-img {
+    flex-basis: 65%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0 50px 0;
+}
+
+.visualization-col-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    transition: opacity 0.5s ease, transform 0.5s;
+}
+
+/* top image is shown by default */
+.visualization-col-img img.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 2;
+}
+
+/* fade out top image on hover */
+.visualization-col-img:hover img.top {
+    opacity: 0;
+    transform: scale(1.05); /* keep your zoom effect */
+}
+
 
 /*--------------------------------------CONTACT SECTION--------------------------------------*/
 #contact {
