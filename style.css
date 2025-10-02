@@ -349,6 +349,29 @@ nav ul li a.selected::after {
     margin-top: 50px;
 }
 
+/*--------------------------------------DATA VIZ (BAR GRAPH) SECTION--------------------------------------*/
+
+.lines {
+    stroke:#333;
+    stroke-width:10;
+    stroke-linecap: round;
+}
+
+.values {
+    stroke:#333;
+    stroke-width:1;
+}
+
+.ytext {
+    writing-mode: sideways-lr;
+}
+
+.bars {
+    stroke:#365486;
+    stroke-width:30;
+    stroke-linecap:square;
+}
+
 /*--------------------------------------CREATIVE SVG SECTION--------------------------------------*/
 
 .tire {

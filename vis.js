@@ -1,5 +1,7 @@
 console.log("vis.js loaded");
 
+//make the bike wheels spin
+
 // variables from index.html
 const frontWheel = document.getElementById('front-wheel');
 const backWheel = document.getElementById('back-wheel');

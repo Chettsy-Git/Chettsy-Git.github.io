@@ -35,14 +35,16 @@
     <div id="visualizations">
     <div class="container">
         <h1 class="sub-title">Visualizations</h1>
-        <p>A showcase of data visualizations created using SVG.</p>
+        <p>A showcase of data visualization and creative art using SVG.</p>
 
         <br>
+
+    <!--------------------------------------BAR CHART-------------------------------------->
 
         <div class="row">
             <div class="vis-col-text">
                 <h1>Bike Rides of the Week</h1>
-                <h3>Gravel Bike | Kms | Days</h3>
+                <h3>Bike Rides | Days | Kms</h3>
                 <br>
                 <p>One of my favourite things to do is ride my bike. I live close to many trails, so it is easy for my
                 to pack my bag and go for a ride. Sometimes they are casual rides with friends down to the river, but other times,
@@ -51,13 +53,96 @@
 
             <div class="vis-col-svg">
                 <svg width="1000" height="600" viewBox="-500 -300 1000 600">
-                   
+                    <g transform="translate(-360, 180)">
+                        <g class="lines">
+                            <!-- Y axis -->
+                            <line x1="0" y1="0" x2="0" y2="-400" />
+
+                            <line x1="0" y1="-50" x2="-20" y2="-50" />
+                            <line x1="0" y1="-100" x2="-20" y2="-100" />
+                            <line x1="0" y1="-150" x2="-20" y2="-150" />
+                            <line x1="0" y1="-200" x2="-20" y2="-200" />
+                            <line x1="0" y1="-250" x2="-20" y2="-250" />
+                            <line x1="0" y1="-300" x2="-20" y2="-300" />
+                            <line x1="0" y1="-350" x2="-20" y2="-350" />
+
+                            <!-- X axis -->
+                            <line x1="0" y1="0" x2="800" y2="0" />
+
+                            <line x1="50" y1="0" x2="50" y2="20" />
+                            <line x1="100" y1="0" x2="100" y2="20" />
+                            <line x1="150" y1="0" x2="150" y2="20" />
+                            <line x1="200" y1="0" x2="200" y2="20" />
+                            <line x1="250" y1="0" x2="250" y2="20" />
+                            <line x1="300" y1="0" x2="300" y2="20" />
+                            <line x1="350" y1="0" x2="350" y2="20" />
+                            <line x1="400" y1="0" x2="400" y2="20" />
+                            <line x1="450" y1="0" x2="450" y2="20" />
+                            <line x1="500" y1="0" x2="500" y2="20" />
+                            <line x1="550" y1="0" x2="550" y2="20" />
+                            <line x1="600" y1="0" x2="600" y2="20" />
+                            <line x1="650" y1="0" x2="650" y2="20" />
+                            <line x1="700" y1="0" x2="700" y2="20" />
+                            <line x1="750" y1="0" x2="750" y2="20" />
+                        </g>
+
+                        <g class="values">
+                            <!-- Y axis -->
+                            <text class="ytext" x="-100" y="-110">(Days of the week)</text>
+
+                            <text x="-80" y="-345">Mon</text>
+                            <text x="-80" y="-295">Tues</text>
+                            <text x="-80" y="-245">Wed</text>
+                            <text x="-80" y="-195">Thurs</text>
+                            <text x="-80" y="-145">Fri</text>
+                            <text x="-80" y="-95">Sat</text>
+                            <text x="-80" y="-45">Sun</text>
+
+
+                            <!-- X axis -->
+                            <text x="300" y="80">(Distance (kms))</text>
+
+                            <text x="45" y="50">1</text>
+                            <text x="95" y="50">2</text>
+                            <text x="145" y="50">3</text>
+                            <text x="195" y="50">4</text>
+                            <text x="245" y="50">5</text>
+                            <text x="295" y="50">6</text>
+                            <text x="345" y="50">7</text>
+                            <text x="395" y="50">8</text>
+                            <text x="445" y="50">9</text>
+                            <text x="490" y="50">10</text>
+                            <text x="540" y="50">11</text>
+                            <text x="590" y="50">12</text>
+                            <text x="640" y="50">13</text>
+                            <text x="690" y="50">14</text>
+                            <text x="740" y="50">15</text>
+                        </g>
+
+                        <g class="bars">
+                            <!-- Monday -->
+                            <line x1="20" y1="-350" x2="395" y2="-350" />
+                            <!-- Tuesday (didnt bike) -->
+                            <!-- <line x1="20" y1="-300" x2="90" y2="-300" /> -->
+                            <!-- Wednesday -->
+                            <line x1="20" y1="-250" x2="145" y2="-250" />
+                            <!-- Thursday (didnt bike) -->
+                            <!-- <line x1="0" y1="-200" x2="0" y2="-200" /> -->
+                            <!-- Friday -->
+                            <line x1="20" y1="-150" x2="295" y2="-150" />
+                            <!-- Saturday -->
+                            <line x1="20" y1="-100" x2="590" y2="-100" />
+                            <!-- Sunday -->
+                            <line x1="20" y1="-50" x2="740" y2="-50" />
+
+                        </g>
+                   </g>
                 </svg>
             </div>
 
         </div>   
 
-        <!-- Creative SVG Art -->
+    <!--------------------------------------CREATIVE ART-------------------------------------->
         <div class="row">
             <div class="vis-col-svg">
                 <svg id="bike" width="1000" height="600" viewBox="-500 -300 1000 600">
