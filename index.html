@@ -20,7 +20,7 @@
             <nav id="navbar">
                 <a href="index.html"><img src="images/portfolio_logo-white.png" class="logo"></a>
                 <ul id="sidemenu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="selected">Home</a></li>
                     <li><a href="visualizations.html">Visualizations</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                     <i class="fa-solid fa-x" onclick="closemenu()"></i>
@@ -51,8 +51,8 @@
                     <p>I thrive on the collaborative nature of game development, relishing the opportunity to work alongside talented artists, programmers, and writers to bring ideas to life. Whether it's brainstorming game mechanics, fine-tuning level design, or shaping narrative arcs, I approach each aspect of game development with enthusiasm and a commitment to excellence.</p>
                     <br>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('experience', event)">Experience</p>
+                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="experience">
                         <ul>
@@ -201,7 +201,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="selected">Home</a></li>
                     <li><a href="visualizations.html">Visualizations</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="https://github.com/Chettsy-Git">GitHub</a></li>
@@ -211,30 +211,14 @@
     </div>
         
     <div class="footer-baseline">
-        <p>&copy; 2024 Simon Chettle. All rights reserved</p>
+        <p>&copy; 2025 Simon Chettle. All rights reserved</p>
     </div>
 
     <!--------------------------------------JS SECTION-------------------------------------->
     
-    <script>
-        
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        
-        function opentab(tabname) 
-        {
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-        
-    </script>
+    <script src="main.js" type="text/javascript"></script>
+    
+
 
 
 

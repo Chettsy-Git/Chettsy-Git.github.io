@@ -21,7 +21,7 @@
                 <a href="index.html"><img src="images/portfolio_logo-white.png" class="logo"></a>
                 <ul id="sidemenu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="visualizations.html">Visualizations</a></li>
+                    <li><a href="visualizations.html" class="selected">Visualizations</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                     <i class="fa-solid fa-x" onclick="closemenu()"></i>
                 </ul>
@@ -30,15 +30,17 @@
         </div>
     </div>
 
+    <!--------------------------------------VISUALIZATION SECTION-------------------------------------->
+
     <div id="visualizations">
     <div class="container">
         <h1 class="sub-title">Visualizations</h1>
-        <p>A showcase of data visualizations created using SVG graphics.</p>
+        <p>A showcase of data visualizations created using SVG.</p>
 
         <br>
 
         <div class="row">
-            <div class="project-col-text">
+            <div class="vis-col-text">
                 <h1>Bike Rides of the Week</h1>
                 <h3>Gravel Bike | Kms | Days</h3>
                 <br>
@@ -46,13 +48,136 @@
                 to pack my bag and go for a ride. Sometimes they are casual rides with friends down to the river, but other times,
                 I like to get my heartrate up and see how long I can maintain a high speed. </p>
             </div>
-            <div class="project-col-img">
-                <img src="images/s&s_main-menu.png" class="top" alt="Main Menu screen from the video game Slow & Steady"></img>
-                <img src="images/s&s_gameplay-1.png" alt="Gameplay screenshot of Slow & Steady"></img>
+
+            <div class="vis-col-svg">
+                <svg width="1000" height="600" viewBox="-500 -300 1000 600">
+                   
+                </svg>
             </div>
+
+        </div>   
+
+        <!-- Creative SVG Art -->
+        <div class="row">
+            <div class="vis-col-svg">
+                <svg id="bike" width="1000" height="600" viewBox="-500 -300 1000 600">
+                    <!-- Back wheel -->
+                    <g transform="translate(-200, 100)">
+                        <g id="back-wheel" class="wheel">
+                            <!-- Tire -->
+                            <circle class="tire" cx="0" cy="0" r="90"/>
+                            
+                            <!-- Hub -->
+                            <circle class="hub" cx="0" cy="0" r="12"/>
+
+                            <!-- Spokes -->
+                            <g class="spokes">
+                                <line x1="0" y1="-80" x2="0" y2="80" />
+                                <line x1="-80" y1="0" x2="80" y2="0" />
+                                <line x1="-60" y1="-60" x2="60" y2="60" />
+                                <line x1="-60" y1="60" x2="60" y2="-60" />
+                            </g>
+
+                            <!-- Rim -->
+                            <circle class="rim" cx="0" cy="0" r="80"/>
+                        </g>
+                    </g>
+                    <!-- Front wheel -->
+                    <g transform="translate(200, 100)">
+                        <g id="front-wheel" class="wheel">
+                            <!-- Tire -->
+                            <circle class="tire" cx="0" cy="0" r="90"/>
+
+                            <!-- Hub -->
+                            <circle class="hub" cx="0" cy="0" r="12"/>
+
+                            <!-- Spokes -->
+                            <g class="spokes">
+                                <line x1="0" y1="-80" x2="0" y2="80" />
+                                <line x1="-80" y1="0" x2="80" y2="0" />
+                                <line x1="-60" y1="-60" x2="60" y2="60" />
+                                <line x1="-60" y1="60" x2="60" y2="-60" />
+                            </g>
+
+                            <!-- Rim -->
+                            <circle class="rim" cx="0" cy="0" r="80"/>
+                        </g>
+                    </g>
+
+                    <!-- Frame -->
+                    <line class="metal" x1="-75" y1="-50" x2="-100" y2="-100" />
+                    <line class="metal" x1="200" y1="100" x2="140" y2="-100" />
+                    <line class="frame" x1="-200" y1="100" x2="0" y2="100" />
+                    <line class="frame" x1="0" y1="100" x2="150" y2="-50" />
+                    <line class="frame" x1="200" y1="100" x2="155" y2="-50" />
+                    <line class="frame" x1="150" y1="-50" x2="-75" y2="-50" />
+                    <line class="frame" x1="-200" y1="100" x2="-75" y2="-50" />
+                    <line class="frame" x1="0" y1="100" x2="-75" y2="-50" />
+
+                    <!-- Chain -->
+                    <circle class="chain" cx="2" cy="100" r="20"/>
+                    <line class="chain" x1="-200" y1="100" x2="0" y2="120" />
+                    <line class="chain" x1="-200" y1="100" x2="0" y2="80" />
+
+                    <!-- Chain ring -->
+                    <circle id="pedal-hub" class="hub" cx="0" cy="100" r="20"/>
+                    <g id="pedal-arm">
+                        <line class="metal" x1="-20" y1="150" x2="20" y2="50" />
+                        <line class="pedals" x1="-30" y1="150" x2="-10" y2="150" />
+                        <line class="pedals" x1="30" y1="50" x2="10" y2="50" />
+                    </g>
+
+                    <!-- Seat -->
+                    <line class="padding" x1="-120" y1="-100" x2="-75" y2="-100" />
+
+                    <!-- Bars -->
+                    <line class="padding" x1="140" y1="-100" x2="175" y2="-100" />
+
+                </svg>
+            </div>
+
+            <div class="vis-col-text">
+                <h1>Creative SVG Art</h1>
+                <h3>My Gravel Bike</h3>
+                <br>
+                <p>I have recreated my gravel bike using SVG. It uses a combination of lines and circles, 
+                    varrying in stroke weight, colour, and position.
+                </p>
+                <br>
+                <p>Click on the pedals to make the wheels rotate!</p>
+            </div>
+
+        </div>   
+
+    </div>
+    </div>
+
+    <!--------------------------------------FOOTER SECTION-------------------------------------->
+    <div id="footer">
+        <div class="container">
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/artbychettsy/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCrJ_fL0P8RF4METUW4bjZ3g"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/simon-chettle-a6415a2a0/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="visualizations.html" class="selected">Visualizations</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="https://github.com/Chettsy-Git">GitHub</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
+        
+    <div class="footer-baseline">
+        <p>&copy; 2025 Simon Chettle. All rights reserved</p>
     </div>
+
+    <!--------------------------------------JS SECTION-------------------------------------->
+    
+    <script src="vis.js" type="text/javascript"></script>
 
 
 

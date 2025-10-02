@@ -98,6 +98,10 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+nav ul li a.selected::after {
+    width: 100%;
+}
+
 .header-text {
     margin-top: 20%;
     font-size: 30px;
@@ -326,7 +330,7 @@ nav ul li a:hover::after {
     background: #404040;
 }
 
-.visualization-col-text {
+.vis-col-text {
     flex-basis: 30%;
     border-radius: 10px;
     position: relative;
@@ -334,44 +338,81 @@ nav ul li a:hover::after {
     align-content: center;
 }
 
-.visualization-col-text h1 {
+.vis-col-text h1 {
     font-size: 40px;
     padding-bottom: 20px;
 }
-.visualization-col-text p span {
-    color: #537fcc;
-    font-weight: 500;
-}
 
-.visualization-col-img {
-    flex-basis: 65%;
+.vis-col-svg {
     border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    margin: 20px 0 50px 0;
+    background-color: #ffffff;
+    margin-top: 50px;
 }
 
-.visualization-col-img img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    transition: opacity 0.5s ease, transform 0.5s;
+/*--------------------------------------CREATIVE SVG SECTION--------------------------------------*/
+
+.tire {
+    stroke: #333; 
+    stroke-width: 20; 
+    fill: transparent;
 }
 
-/* top image is shown by default */
-.visualization-col-img img.top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 1;
-    z-index: 2;
+.rim {
+    stroke: #555;
+    stroke-width: 10; 
+    fill: transparent;
 }
 
-/* fade out top image on hover */
-.visualization-col-img:hover img.top {
-    opacity: 0;
-    transform: scale(1.05); /* keep your zoom effect */
+.hub {
+    fill:#555;
+}
+
+.spokes {
+    stroke:#333;
+    stroke-width:2;
+}
+
+.frame {
+    stroke: #3437ff;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.metal {
+    stroke: #808080;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.padding {
+    stroke:#262626;
+    stroke-width: 20;
+    stroke-linecap: round;
+}
+
+.pedals {
+    stroke:#262626;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.chain {
+    stroke: #808080;
+    stroke-width: 5;
+    stroke-linecap: round;
+}
+
+.wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.spinning {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
 
