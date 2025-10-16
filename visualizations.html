@@ -3,13 +3,45 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>IAT355 A2 - Personal Website</title>
+        <title>IAT355 - Personal Website</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/13f332e762.js" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="style.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+
+        <!-- from A3-Intro-to-Vegalite-Main.zip -->
+        <script>
+            const options = {
+                config: {
+                // Vega-Lite default configuration
+                },
+                init: (view) => {
+                // initialize tooltip handler
+                view.tooltip(new vegaTooltip.Handler().call);
+                },
+                view: {
+                // view constructor options
+                // remove the loader if you don't want to default to vega-datasets!
+                loader: vega.loader({
+                    baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/",
+                }),
+                renderer: "canvas",
+                },
+            };
+
+            // register vega and vega-lite with the API
+            vl.register(vega, vegaLite, options);
+        </script>
 
 
     </head>
@@ -232,8 +264,60 @@
                 <p>Click on the pedals to make the wheels rotate!</p>
             </div>
 
-        </div>   
+        </div>
 
+    <!--Vega-Lite Visualizations-->
+        <div class="row">
+            <div class="vis-col-text">
+                <h1>Visualization 1</h1>
+                <h3>Global Sales by Genre and Platform</h3>
+                <br>
+                <p></p>
+            </div>
+
+            <div>
+                <div id="view"></div>
+            </div>                 
+        </div>
+
+        <div class="row">
+            <div class="vis-col-text">
+                <h1>Visualization 2</h1>
+                <h3>Sales Over Time by Platform and Genre</h3>
+                <br>
+                <p></p>
+            </div>
+
+            <div>
+                <div id="view2"></div>
+            </div>      
+        </div>
+
+        <div class="row">
+            <div class="vis-col-text">
+                <h1>Visualization 3</h1>
+                <h3>Regional Sales vs. Platform</h3>
+                <br>
+                <p></p>
+            </div>
+
+            <div>
+                <div id="view3"></div>
+            </div>      
+        </div>
+
+        <div class="row">
+            <div class="vis-col-text">
+                <h1>Visualization 4</h1>
+                <h3>A Visual Story</h3>
+                <br>
+                <p></p>
+            </div>
+
+            <div>
+                <div id="view4"></div>
+            </div>      
+        </div>
     </div>
     </div>
 

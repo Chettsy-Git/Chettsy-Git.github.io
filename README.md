@@ -1,5 +1,5 @@
 <!-- # Chettsy-Git.github.io -->
-# A personal website for IAT355. 
+# Assignment 2 - A personal website for IAT355. 
 It includes a home page with my information and resume type data, as well as custom visualizations.
 It was coded in Visual Studio Code, using languages like HTML, CSS, and JavaScript. 
 It will be uploaded to a repository and available on GitHub.
@@ -32,3 +32,5 @@ It will be uploaded to a repository and available on GitHub.
 - click on the painting to visit the instagram video where I show how I made it.
 
 - fill in the contact form to send it to a google sheet where I have organized the data.
+
+# Assignment 3 - Creating Visualizations using Vega-Lite. 
