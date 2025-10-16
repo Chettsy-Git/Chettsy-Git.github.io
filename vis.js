@@ -27,55 +27,113 @@ async function fetchData() {
 }
 
 fetchData().then(async (data) => {
+  //Global Sales by Platform and Genre
   const vlSpec = vl
     .markBar()
     .data(data)
+    .transform(
+      vl.aggregate([{ op: 'sum', field: 'Global_Sales', as: 'Sales' }]).groupby(['Platform', 'Genre'])
+    )
     .encode(
-      vl.y().fieldN("Platform").sort("-x"),
-      vl.x().fieldQ("Global_Sales").aggregate("sum"),
+      vl.y().fieldN('Platform').sort('-x').title('Platform'),
+      vl.x().fieldQ('Sales').title('Global Sales (Million)'),
+      vl.color().fieldN('Genre').title('Genre'),
       vl.tooltip([
-        vl.fieldN("Platform"),
-        vl.fieldQ("Global_Sales")
+        { field: 'Platform', type: 'nominal' },
+        { field: 'Genre', type: 'nominal' },
+        { field: 'Sales', type: 'quantitative', format: '.2f', title: 'Global Sales (M)' }
       ])
     )
-    .width(vizWidth)
+    .width(800)
     .height(vizHeight)
+    .title('Global Sales by Platform and Genre')
     .toSpec();
 
-  const vlSpec2 = vl
-    .markBar()
+  // Two graphs showing sales over time by platfrom, then genre
+  // Top: Area trends by Platform over time
+  const byPlatform = vl
+    .markArea({ interpolate: 'monotone' })
     .data(data)
-    .encode(
-      vl.y().fieldN("Genre").sort("-x"),
-      vl.x().fieldQ("Global_Sales").aggregate("sum"),
-      vl.color().value("teal")
+    .transform(
+      vl.filter('isValid(datum.Year)'),
+      vl.aggregate([{ op: 'sum', field: 'Global_Sales', as: 'Sales' }]).groupby(['Year','Platform'])
     )
-    .width(870)
-    .height(vizHeight)
+    .encode(
+      vl.x().fieldQ('Year').axis({ tickMinStep: 1 }).title('Year'),
+      vl.y().fieldQ('Sales').stack('zero').title('Global Sales (Million)'),
+      vl.color().fieldN('Platform').title('Platform'),
+      vl.tooltip(['Year','Platform',{ field:'Sales', type:'quantitative', format:'.2f'}])
+    )
+    .width(800)
+    .height(320)
+    .title('Global Sales Over Time — Platform Trends');
+
+  // Bottom: Line trends by Genre over time
+  const byGenre = vl
+    .markLine({ point: true })
+    .data(data)
+    .transform(
+      vl.filter('isValid(datum.Year)'),
+      vl.aggregate([{ op: 'sum', field: 'Global_Sales', as: 'Sales' }]).groupby(['Year','Genre'])
+    )
+    .encode(
+      vl.x().fieldQ('Year').axis({ tickMinStep: 1 }).title('Year'),
+      vl.y().fieldQ('Sales').title('Global Sales (Million)'),
+      vl.color().fieldN('Genre').title('Genre'),
+      vl.tooltip(['Year','Genre',{ field:'Sales', type:'quantitative', format:'.2f'}])
+    )
+    .width(800)
+    .height(320)
+    .title('Global Sales Over Time — Genre Trends');
+
+  // Stacking the two graphs
+  const vlSpec2 = vl.vconcat(byPlatform, byGenre)
+    .resolve({ scale: { color: 'independent' } })   // separate color legends
     .toSpec();
 
+  // Bubble matrix comparing platform sales and region
   const vlSpec3 = vl
-    .markBar()
+    .markCircle({ color: "darkorange"})
     .data(data)
-    .encode(
-      vl.y().fieldN("Genre").sort("-x"),
-      vl.x().fieldQ("Global_Sales").aggregate("sum"),
-      vl.color().value("red")
+    .transform(
+      vl.fold(['NA_Sales','EU_Sales','JP_Sales','Other_Sales']).as(['Region','Sales']),
+      vl.aggregate([{ op:'sum', field:'Sales', as:'Total' }]).groupby(['Platform','Region'])
     )
-    .width(870)
-    .height(vizHeight)
+    .encode(
+      vl.y().fieldN('Platform').sort('-x').title('Platform'),
+      vl.x().fieldN('Region').title('Region').sort(['NA_Sales','EU_Sales','JP_Sales','Other_Sales']),
+      vl.size().fieldQ('Total').title('Total Sales (M)'),
+      vl.tooltip([
+        { field: 'Platform', type: 'nominal' },
+        { field: 'Region', type: 'nominal' },
+        { field: 'Total', type: 'quantitative', title: 'Sales (M)', format: '.2f' }
+      ])
+    )
+    .width(800)
+    .height({ step: 22 })
+    .title('Sales by Platform and Region')
     .toSpec();
 
+  // Scatter plot comparing Japan vs. Global sales by genre
   const vlSpec4 = vl
-    .markBar()
+    .markCircle({ opacity: 0.9 })
     .data(data)
-    .encode(
-      vl.y().fieldN("Genre").sort("-x"),
-      vl.x().fieldQ("Global_Sales").aggregate("sum"),
-      vl.color().value("yellow")
+    .transform(
+      vl.aggregate([
+        { op: 'sum', field: 'Global_Sales', as: 'Global' },
+        { op: 'sum', field: 'JP_Sales', as: 'Japan' }
+      ]).groupby(['Name','Genre'])
     )
-    .width(870)
-    .height(vizHeight)
+    .encode(
+      vl.x().fieldQ('Global').title('Global Sales (M)'),
+      vl.y().fieldQ('Japan').title('Japan Sales (M)'),
+      vl.color().fieldN('Genre').title('Genre'),
+      vl.tooltip(['Name','Genre',{ field:'Global', type:'quantitative', format:'.2f' },
+                  { field:'Japan', type:'quantitative', format:'.2f' }])
+    )
+    .width(800)
+    .height(450)
+    .title('Japan vs Global Sales by Genre')
     .toSpec();
 
   render("#view", vlSpec);
